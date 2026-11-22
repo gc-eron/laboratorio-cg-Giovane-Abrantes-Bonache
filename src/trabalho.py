@@ -9,6 +9,9 @@ st.title("Trabalho de Computação Gráfica")
 foto = Image.open("imagens/gato.jpg")
 img = np.array(foto.convert("RGB"))
 
+foto2 = Image.open("imagens/que mario.jpg") # melhor visibilidade para a media ponderada la
+img2 = np.array(foto2.convert("RGB"))
+
 
 
 #-------------------------------------------------------------------
@@ -31,9 +34,9 @@ col2.image(imagem_brilho, caption="Brilho alterado")
 st.header("2. Tons de cinza")
 col1, col2 = st.columns(2)
 
-r = img[:, :, 0].astype(float)
-g = img[:, :, 1].astype(float)
-b = img[:, :, 2].astype(float)
+r = img2[:, :, 0].astype(float)
+g = img2[:, :, 1].astype(float)
+b = img2[:, :, 2].astype(float)
 
 soma = r + g + b
 media = (soma / 3).astype(np.uint8)
